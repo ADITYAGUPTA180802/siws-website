@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | SIWS College</title>
+  <style>
+    body {
+      background-color: #f0f4ff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #002D72;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #002D72;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #f39c12;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: #002D72;
+      font-weight: bold;
+    }
+
+    .back a:hover {
+      color: #f39c12;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Admission Registration</h2>
+    <form>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label>College ID</label>
+        <input type="text" placeholder="Enter your college ID" required>
+      </div>
+
+      <div class="input-group">
+        <label>Course</label>
+        <select required>
+          <option value="">Select Course</option>
+          <option>B.Sc (IT)</option>
+          <option>B.Com</option>
+          <option>B.Sc (CS)</option>
+          <option>M.Com</option>
+          <option>M.Sc (IT)</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create a password" required>
+      </div>
+
+      <button type="submit">Register</button>
+
+      <div class="back">
+        <a href="login.html">← Back to Login</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIWS College Admission Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 900px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      display: flex;
+      overflow: hidden;
+    }
+
+    .image-section {
+      width: 45%;
+      background: url('https://cdn.pixabay.com/photo/2016/11/18/14/25/students-1838650_1280.jpg') no-repeat center center/cover;
+    }
+
+    .form-section {
+      width: 55%;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #002D72;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #002D72;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #f39c12;
+      transition: 0.3s;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .switch a {
+      color: #002D72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .switch a:hover {
+      color: #f39c12;
+    }
+
+    /* Hidden by default */
+    .registration-section {
+      display: none;
+    }
+
+    /* Show registration when active */
+    .registration-section.active {
+      display: block;
+    }
+
+    .login-section.active {
+      display: block;
+    }
+
+    .login-section {
+      display: none;
+    }
+
+    .form-section img {
+      display: block;
+      margin: 0 auto 15px;
+      width: 80px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-section"></div>
+
+    <div class="form-section">
+
+      <!-- Login Section -->
+      <div id="login" class="login-section active">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student Icon">
+        <h2>Student Login</h2>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label>Email / College ID</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email or college ID" required>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+
+          <button type="submit">Login</button>
+
+          <div class="switch">
+            <p>Don’t have an account? <a href="#" onclick="showRegistration()">Register for Admission</a></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Registration Section -->
+      <div id="register" class="registration-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Registration Icon">
+        <h2>Student Registration</h2>
+
+        <form id="registerForm">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="input-group">
+            <label>College ID</label>
+            <input type="text" id="collegeId" placeholder="Enter your college ID" required>
+          </div>
+
+          <div class="input-group">
+            <label>Course</label>
+            <select id="course" required>
+              <option value="">Select Course</option>
+              <option>B.Sc (IT)</option>
+              <option>B.Com</option>
+              <option>B.Sc (CS)</option>
+              <option>M.Com</option>
+              <option>M.Sc (IT)</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Create a password" required>
+          </div>
+
+          <button type="submit">Register</button>
+
+          <div class="switch">
+            <p>Already have an account? <a href="#" onclick="showLogin()">Back to Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginSection = document.getElementById('login');
+    const registerSection = document.getElementById('register');
+
+    function showRegistration() {
+      loginSection.classList.remove('active');
+      registerSection.classList.add('active');
+    }
+
+    function showLogin() {
+      registerSection.classList.remove('active');
+      loginSection.classList.add('active');
+    }
+
+    // Simple Form Validation
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Login successful! (You can connect this to your college database.)");
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Registration successful! Welcome to SIWS College Admission Portal.");
+      showLogin();
+    });
+  </script>
+
+</body>
+</html>
