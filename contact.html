@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College | Contact Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f0f4ff;
+        }
+
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .contact-box,
+        .map-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+        }
+
+        .contact-box:hover,
+        .map-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #1a237e;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,textarea,select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            font-size: 15px;
+            transition: 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #1a237e;
+            outline: none;
+            box-shadow: 0 0 8px rgba(26, 35, 126, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            background: #1a237e;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #303f9f;
+            transform: scale(1.02);
+        }
+
+        iframe {
+            width: 100%;
+            border: 0;
+            min-height: 420px;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>Contact Us - S.I.W.S College</header>
+
+    <div class="container">
+
+        <!-- Contact Form -->
+        <div class="contact-box">
+            <h2>CONTACT US</h2>
+            <form onsubmit="showSuccess(event)">
+            <form>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Your Email" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Department</label>
+                    <select>
+                        <option>Select Department</option>
+                        <option>B.Com</option>
+                        <option>B.Sc</option>
+                        <option>BMS</option>
+                        <option>M.Com</option>
+                        <option>M.Sc.</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <button type="submit">Submit Message</button>
+            </form>
+            <p id="successMsg" style="display:none; margin-top:15px; padding:12px; background:#c8e6c9; color:#1b5e20; border-radius:8px; font-weight:500;">Your form has been successfully submitted!</p>
+
+
+<script>
+function showSuccess(event) {
+event.preventDefault();
+document.getElementById('successMsg').style.display = 'block';
+}
+</script>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-box">
+            <h2>College Location</h2>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.974372723126!2d72.859211!3d19.0208509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2471db2e49%3A0xcc5a204b43829c1d!2sN%20R%20Swamy%20College%20of%20Commerce%20and%20Economics!5e0!3m2!1sen!2sin!4v1763242178750!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>

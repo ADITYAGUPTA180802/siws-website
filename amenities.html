@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIWS College Facilities</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3 {
+      margin: 0;
+      padding: 15px;
+      background: linear-gradient(180deg, #001f54, #3a0ca3);
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .details {
+      display: none;
+      padding: 15px 20px;
+      background: #fff;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+      border-top: 1px solid #ddd;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .arrow-btn {
+      width: 100%;
+      background: linear-gradient(90deg, #ffb703, #fb8500);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-top: 2px solid #fff;
+    }
+
+    .arrow-btn:hover {
+      background: linear-gradient(90deg, #ff9e00, #ff6b00);
+    }
+
+    .arrow-btn:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="card">
+      <img src="images/health.jpg" alt="Health Center">
+      <h3>Health Center</h3>
+      <a href="health.html">
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+
+    <div class="card">
+      <img src="images/gymkhana.jpg" alt="Gymkhana">
+      <h3>Gymkhana</h3>
+      <a href="gymkhana.html">
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+
+    <div class="card">
+      <img src="images/Library.jpg" alt="Library">
+      <h3>Library</h3>
+      <a href="Library.html">
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+
+
+<div class="card">
+      <img src="images/Laboratory.jpg" alt="Laboratry">
+      <h3>Laboratory</h3>
+      <a href="Laboratory.html">
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+
+
+
+  <div class="card">
+      <img src="images/computerlab.jpg" alt="Lab">
+      <h3>Computer Lab</h3>
+      <a href="lab.html">
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+
+
+    <div class="card">
+      <img src="images/canteen.jpg" alt="Canteen">
+      <h3>Canteen</h3>
+      <a href="canteen.html" >
+      <button class="arrow-btn">Show Details ↓</button></a>
+    </div>
+</div>
+ 
+</body>
+</html>
